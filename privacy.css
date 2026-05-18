@@ -1,0 +1,184 @@
+/* SPARK TERMINAL: СТИЛИ ДЛЯ ВКЛАДКИ «ПРИВАТНОСТЬ»
+*/
+
+/* Базовые настройки страницы для демонстрации в браузере */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #050507; /* Глубокий космос за пределами окна */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* КОНТЕЙНЕР СТРАНИЦЫ НАСТРОЕК */
+.spark-settings-page {
+    background-color: #0a0a0c; /* Фирменный глубокий черный фон терминала */
+    border: 1px solid #1a1a22; /* Тонкая футуристичная рамка */
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ШАПКА ВКЛАДКИ */
+.settings-header {
+    margin-bottom: 30px;
+}
+
+.settings-title {
+    color: #a88f62; /* Фирменное золото */
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.settings-subtitle {
+    color: #626270;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* СПИСОК ПУНКТОВ */
+.settings-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid #1a1a22;
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+/* Вертикальное выравнивание для блока с формой */
+.privacy-item-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ТЕКСТЫ */
+.item-label {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+}
+
+.item-description {
+    color: #626270;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* ФОРМА И ПОЛЯ ВВОДА */
+.privacy-password-form {
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.spark-input {
+    width: 100%;
+    background-color: #121216; /* Чуть светлее основного фона */
+    border: 1px solid #1a1a22;
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Фокус на инпут — зажигается мятный неон */
+.spark-input:focus {
+    border-color: #5af7c2;
+    box-shadow: 0 0 10px rgba(90, 247, 194, 0.15);
+}
+
+/* КНОПКА ОТПРАВКИ ФОРМЫ (Мятная) */
+.spark-btn-submit {
+    align-self: flex-start;
+    background: none;
+    border: 1px solid #5af7c2;
+    color: #5af7c2;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.spark-btn-submit:hover {
+    background-color: #5af7c2;
+    color: #0a0a0c;
+    box-shadow: 0 0 15px rgba(90, 247, 194, 0.3);
+}
+
+/* БЛОК УДАЛЕНИЯ (Красный) */
+.danger-title {
+    color: #e25c5c; /* Название опции сразу подсвечиваем тревожным красным */
+}
+
+.spark-btn-danger {
+    background: none;
+    border: 1px solid #e25c5c;
+    color: #e25c5c;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.spark-btn-danger:hover {
+    background-color: #e25c5c;
+    color: #0a0a0c;
+    box-shadow: 0 0 15px rgba(226, 92, 92, 0.4);
+}
+
+/* АДАПТИВНОСТЬ ДЛЯ СМАРТФОНОВ */
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .spark-btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+    .settings-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .spark-btn-danger {
+        width: 100%;
+        text-align: center;
+    }
+}
