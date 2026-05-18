@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARK Terminal — Настройки приватности</title>
+    <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+
+    <div class="spark-settings-page">
+      
+      <div class="settings-header">
+        <h2 class="settings-title">ПРИВАТНОСТЬ</h2>
+        <p class="settings-subtitle">Управление доступом к вашему терминалу и конфигурация безопасности профиля.</p>
+      </div>
+
+      <div class="settings-list">
+        
+        <div class="settings-item privacy-item-vertical">
+          <div class="item-info">
+            <h3 class="item-label">Безопасность</h3>
+            <p class="item-description">Обновление ключа доступа (пароля) к вашей системе.</p>
+          </div>
+          
+          <form class="privacy-password-form" id="privacy-form-password">
+            <div class="input-group">
+              <input type="password" id="current-password" placeholder="Текущий пароль" required class="spark-input">
+              <input type="password" id="new-password" placeholder="Новый пароль" required class="spark-input">
+            </div>
+            <button type="submit" class="spark-btn-submit">Обновить пароль</button>
+          </form>
+        </div>
+
+        <div class="settings-item">
+          <div class="item-info">
+            <h3 class="item-label danger-title">Удаление терминала</h3>
+            <p class="item-description">Полное удаление профиля. Все ваши искры будут безвозвратно поглощены черной дырой.</p>
+          </div>
+          <div class="item-action">
+            <button type="button" class="spark-btn-danger" id="btn-open-delete-modal">Стереть аккаунт</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</body>
+</html>
